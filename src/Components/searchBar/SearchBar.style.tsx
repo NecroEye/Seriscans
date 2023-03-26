@@ -3,16 +3,18 @@ import {StyleSheet} from "react-native";
 export default StyleSheet.create({
 
   input_container: {
-    backgroundColor:'gray',
+    backgroundColor:'white',
     padding:7,
     margin:10,
-    borderRadius:10,
+    borderRadius:25,
     height:55,
-    width:300,
-    borderWidth:2,
+    width:380,
+    borderWidth:1,
     borderEndColor:'red',
-    borderStartColor:'black'
+    borderStartColor:'green'
   },
-
+  newEpText_container:{backgroundColor:'pink', marginBottom:3,height:25,
+    width:100,marginStart:20, borderBottomRightRadius:70, borderTopRightRadius:20},
+  newEpText:{color:'white', fontWeight:'bold',fontSize:14,textAlign:'center'},
 
 });

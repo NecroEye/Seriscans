@@ -1,14 +1,24 @@
-import React from "react";
-import {View,Image} from 'react-native';
-import BannerCardStyle from "./BannerCard.style";
+import * as React from "react";
+import {  Image, ScrollView, TouchableOpacity } from "react-native";
+import bannerCardStyle from "./BannerCard.style";
+import musicData from '../../music-data.json';
+
+
 
 function BannerCard(){
 
+
   return(
 
-    <View>
 
-    </View>
+
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+        {
+          musicData.map(banners => (<Image style={bannerCardStyle.banner_container} source={{uri: banners.imageUrl}}/>))
+        }
+      </ScrollView>
+
+
 
   );
 
