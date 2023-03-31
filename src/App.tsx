@@ -14,8 +14,8 @@ const SpecialArea = () => {
 
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
-      <Tab.Screen name="InfoArea" component={InfoPage} />
-      <Tab.Screen name="ReadingPage" component={ReadingPage} />
+      <Tab.Screen name="Bilgi Alanı" component={InfoPage} />
+      <Tab.Screen name="Okuma Alanı" component={ReadingPage} />
     </Tab.Navigator>
   );
 };

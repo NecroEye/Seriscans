@@ -17,6 +17,7 @@ function itemCard({ manga }: any) {
         <View>
           <Image style={itemCardStyle.image_container} source={{uri: manga.imageUrl}} />
           <Text style={itemCardStyle.Manga_text}>Manga Name: {manga.artist}</Text>
+
         </View>
       </TouchableOpacity>
     </View>

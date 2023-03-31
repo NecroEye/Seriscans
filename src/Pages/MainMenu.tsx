@@ -59,7 +59,7 @@ function MainMenu() {
 const style = StyleSheet.create({
 
   main_container: { flex: 1, backgroundColor: "gainsboro", alignItems: "center" },
-  logo: {height:50, width:300,backgroundColor:'black', borderRadius:7,margin:3},
+  logo: {height:50, width:300,backgroundColor:'black', borderRadius:7,margin:3, padding:10},
   TrendText:{color:'white', fontWeight:'bold',fontSize:14,textAlign:'center'},
   Trend_container:{height:25,width:100,backgroundColor:'red',borderWidth:1,
     borderColor:'red', alignSelf:'flex-start', alignItems:'center',margin:3,

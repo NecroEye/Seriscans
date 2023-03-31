@@ -3,9 +3,9 @@ import { Dimensions, StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 
-  outer_container: {backgroundColor:'white',
+  outer_container: {backgroundColor:'black',
     alignItems:'center',
-    borderRadius: 6,
+    borderRadius: 10,
     borderWidth: 1,
     margin:10,
     padding:10,
@@ -24,7 +24,7 @@ export default StyleSheet.create({
   Manga_text: {
     textAlign:'center',
     fontWeight:'bold',
-    color:'black',
+    color:'white',
     fontSize:20,
     paddingTop:10
   },
