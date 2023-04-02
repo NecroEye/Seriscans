@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, View, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { SafeAreaView, Text, View, ImageBackground, Dimensions, TouchableOpacity, ScrollView } from "react-native";
 import GenreCard from "../Components/GenreCard";
 import EpisodeCard from "../Components/EpisodeCard";
 
@@ -10,7 +10,7 @@ function InfoPage({ navigation }: any) {
   return (
 
     <SafeAreaView>
-      <View style={{backgroundColor:'black'}}>
+      <ScrollView style={{backgroundColor:'black'}}>
 
         <ImageBackground style={{ padding: 10 * 2, height: height / 2.5}}
                          source={require("../logo.png")}>
@@ -55,11 +55,15 @@ function InfoPage({ navigation }: any) {
              <View>
                <GenreCard/>
              </View>
+          <View style={{margin:10}}>
+            <Text style={{color:'black', fontWeight:'600', fontSize:22, margin:10 }}>Description</Text>
+            <Text style={{color:'black', fontWeight:'300', fontSize:16 }}>Açıklama blablabla</Text>
+          </View>
           <View>
             <EpisodeCard/>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
 
   );
