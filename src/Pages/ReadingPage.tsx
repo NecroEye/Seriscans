@@ -1,5 +1,7 @@
 import React from "react";
-import {SafeAreaView, Text} from "react-native";
+import {SafeAreaView, FlatList} from "react-native";
+import ReadingCard from "../Components/ReadingCard";
+import musicData from '../music-data.json';
 
 
 function ReadingPage(){
@@ -7,7 +9,7 @@ function ReadingPage(){
   return(
 
     <SafeAreaView>
-      <Text>Reading</Text>
+     <FlatList data={musicData} renderItem={({item}) => <ReadingCard image={item.imageUrl}/>} />
     </SafeAreaView>
 
   );

@@ -13,7 +13,7 @@ function InfoPage({ navigation }: any) {
       <ScrollView style={{backgroundColor:'black'}}>
 
         <ImageBackground style={{ padding: 10 * 2, height: height / 2.5}}
-                         source={require("../logo.png")}>
+                         source={require("../logo.png")} resizeMode='stretch'>
 
           <TouchableOpacity style={{
             height: 10 * 4.5,

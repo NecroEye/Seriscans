@@ -12,13 +12,15 @@ export default StyleSheet.create({
     borderStartColor: "red",
     borderEndColor: "black",
     width: 300,
-    height: Dimensions.get("screen").height / 3
+    height: Dimensions.get("screen").height / 3,
+    opacity:0.9
   },
 
   image_container: {
     borderRadius: 2,
     width: Dimensions.get("screen").width / 1.5,
-    height: Dimensions.get("screen").height / 4
+    height: Dimensions.get("screen").height / 4,
+    resizeMode:'stretch'
   },
 
   Manga_text: {

@@ -5,7 +5,6 @@ import ItemCard from "../Components/itemCard";
 import musicData from "../music-data.json";
 import SearchBar from "../Components/searchBar/SearchBar";
 import Config from "react-native-config";
-import Deneme from "../Components/itemCard/Deneme";
 import useFetch from "../Hooks/UseFetch/useFetch";
 import Loading from "../Components/Loading/Loading";
 import Error from "../Components/Error/Error";
@@ -42,9 +41,11 @@ function MainMenu() {
     return <Error />;
   }
 
+
   return (
 
     <SafeAreaView style={style.main_container}>
+
 
       <Image style={style.logo} source={require("../logo.png")} />
 
@@ -70,7 +71,7 @@ function MainMenu() {
 const style = StyleSheet.create({
 
   main_container: { flex: 1, backgroundColor: "gainsboro", alignItems: "center" },
-  logo: { height: 50, width: 300, backgroundColor: "black", borderRadius: 7, margin: 3, padding: 10 },
+  logo: { height: 50, width: 300, backgroundColor: "black", borderRadius: 7, margin: 3, padding: 10, resizeMode:'stretch' },
   TrendText: { color: "white", fontWeight: "bold", fontSize: 14, textAlign: "center" },
   Trend_container: {
     height: 25, width: 100, backgroundColor: "red", borderWidth: 1,
