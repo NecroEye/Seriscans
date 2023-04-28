@@ -4,19 +4,25 @@ import { useNavigation } from '@react-navigation/native';
 import itemCardStyle from "./itemCard.style";
 
 
+
 function itemCard(props:any) {
 
   const navigation = useNavigation();
 
-
   return (
 
-
     <View style={itemCardStyle.outer_container}>
-      <TouchableWithoutFeedback onPress={() => navigation.navigate('InfoPage')} >
+
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('InfoPage',{
+        id: props.number,
+        image: props.image,
+        name: props.name
+      })} >
+
         <View>
           <Image style={itemCardStyle.image_container} source={{uri: props.image}} />
           <Text style={itemCardStyle.Manga_text}>Manga Name: {props.name}</Text>
+
 
         </View>
       </TouchableWithoutFeedback>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SafeAreaView, Text, FlatList, StyleSheet, View, Image } from "react-native";
 import BannerCard from "../Components/BannerCard";
 import ItemCard from "../Components/itemCard";
@@ -8,16 +8,42 @@ import Config from "react-native-config";
 import useFetch from "../Hooks/UseFetch/useFetch";
 import Loading from "../Components/Loading/Loading";
 import Error from "../Components/Error/Error";
+import axios from "axios";
 
 
 function MainMenu() {
 
 
   const [list, setList] = useState(musicData);
-  const renderMangaList = ({ item }: any) => <ItemCard image={item.imageUrl} name={item.artist} />;
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
-  const { loading, data, error } = useFetch(Config.API_URL);
+
+  const renderMangaList = ({ item }: any) => <ItemCard image={item.url} name={item.title} number={item.id} />;
+
+
+
+  function getData(){
+
+    axios.get('https://jsonplaceholder.typicode.com/photos')
+      .then(response => {
+        console.log(response);
+        setData(response.data);
+
+
+      })
+      .catch(error => console.log(error))
+      .finally(() => setLoading(false));
+
+
+  }
+
+  useEffect(() => {
+
+    getData();
+
+  }, []);
 
 
   const HandleSearch = (text: any) => {
@@ -37,9 +63,6 @@ function MainMenu() {
   if (loading) {
     return <Loading />;
   }
-  if (error) {
-    return <Error />;
-  }
 
 
   return (
@@ -57,7 +80,7 @@ function MainMenu() {
       <View style={{ width: "100%", borderWidth: 1 }} />
       <SearchBar onSearch={HandleSearch} />
       <FlatList
-        data={list}
+        data={data}
         renderItem={renderMangaList} />
 
 

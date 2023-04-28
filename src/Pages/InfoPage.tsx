@@ -5,15 +5,19 @@ import EpisodeCard from "../Components/EpisodeCard";
 
 const height = Dimensions.get("window").height;
 
-function InfoPage({ navigation }: any) {
+function InfoPage({ route, navigation }:any ) {
+
+
+ console.log(route.params);
+
 
   return (
 
     <SafeAreaView>
-      <ScrollView style={{backgroundColor:'black'}}>
+      <ScrollView >
 
         <ImageBackground style={{ padding: 10 * 2, height: height / 2.5}}
-                         source={require("../logo.png")} resizeMode='stretch'>
+                         source={{uri: route.params.image}} resizeMode='stretch'>
 
           <TouchableOpacity style={{
             height: 10 * 4.5,
@@ -37,8 +41,8 @@ function InfoPage({ navigation }: any) {
         }}>
 
           <View style={{ flexDirection: "row", marginBottom: 10 * 2, alignItems:'center' }}>
-            <View style={{ width: "70%" }}>
-              <Text style={{ fontSize: 30, color: "black", fontWeight: "700" }}>Manga Name</Text>
+            <View style={{ width: "70%", maxWidth:250 }}>
+              <Text style={{ fontSize: 30, color: "black", fontWeight: "700" }}>{route.params.name}</Text>
             </View>
             <View style={{
               padding: 14 / 2,

@@ -27,6 +27,7 @@ export default StyleSheet.create({
     textAlign:'center',
     fontWeight:'bold',
     color:'white',
+    maxHeight:60,
     fontSize:20,
     paddingTop:10
   },
