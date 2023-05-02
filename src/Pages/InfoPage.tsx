@@ -2,6 +2,8 @@ import React from "react";
 import { SafeAreaView, Text, View, ImageBackground, Dimensions, TouchableOpacity, ScrollView } from "react-native";
 import GenreCard from "../Components/GenreCard";
 import EpisodeCard from "../Components/EpisodeCard";
+// @ts-ignore
+import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const height = Dimensions.get("window").height;
 
@@ -27,7 +29,7 @@ function InfoPage({ route, navigation }:any ) {
             alignItems: "center",
             borderRadius: 10 * 2
           }} onPress={() => navigation.navigate("MainMenu")}>
-            <Text style={{ color: "gray" }}>Back icon</Text>
+            <Icons name={"arrow-left-bold"} size={25}/>
           </TouchableOpacity>
         </ImageBackground>
 

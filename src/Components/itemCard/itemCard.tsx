@@ -13,17 +13,12 @@ function itemCard(props:any) {
 
     <View style={itemCardStyle.outer_container}>
 
-      <TouchableWithoutFeedback onPress={() => navigation.navigate('InfoPage',{
-        id: props.number,
-        image: props.image,
-        name: props.name
-      })} >
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('InfoPage',
+          {screen:'Bilgi Alanı', params:{id:props.number, image: props.image, name: props.name}})} >
 
         <View>
           <Image style={itemCardStyle.image_container} source={{uri: props.image}} />
           <Text style={itemCardStyle.Manga_text}>Manga Name: {props.name}</Text>
-
-
         </View>
       </TouchableWithoutFeedback>
     </View>
